@@ -14,7 +14,6 @@ export async function POST(
       liked: likedCnt,
     },
   });
-  console.log(feed);
 
   return Response.json({
     ok: true,

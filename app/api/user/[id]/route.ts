@@ -14,7 +14,6 @@ export async function GET(
       id: +params.id,
     },
   });
-  console.log(user);
   return Response.json({
     ok: true,
     user,

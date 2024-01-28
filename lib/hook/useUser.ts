@@ -7,7 +7,6 @@ export default function useUser() {
 
   // sessionStorage check
   const userId = sessionStorage.getItem("user");
-  console.log("useUser", userId);
 
   const { data, error } = useMySWR(`/api/user/${userId}`);
 
@@ -15,7 +14,6 @@ export default function useUser() {
     if (!userId || (data && !data.ok) || error) {
       router.push("/login-in");
     }
-    console.log(data);
   }, [data, error]);
 
   return { user: data?.user };

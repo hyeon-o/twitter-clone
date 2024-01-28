@@ -33,12 +33,10 @@ interface ReadFeedResponse {
 export default function Page() {
   // 사용자 정보
   const { user } = useUser();
-  console.log(user);
 
   // form input
   const { register, handleSubmit, reset } = useForm<FeedForm>();
   const onSubmit = (data: FeedForm) => {
-    console.log(data);
     createFeed({ userId: user.id, ...data });
   };
 

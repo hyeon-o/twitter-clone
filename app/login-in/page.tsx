@@ -21,7 +21,6 @@ export default function Page() {
   // form input
   const { register, handleSubmit } = useForm<LoginForm>();
   const onSubmit = (data: LoginForm) => {
-    console.log(data);
     validUser(data);
   };
   // POST /api/user/valid API
@@ -30,7 +29,6 @@ export default function Page() {
   const router = useRouter();
   useEffect(() => {
     if (data?.ok && data?.user) {
-      console.log(data.user);
       sessionStorage.setItem("user", data.user.id.toString())
       router.push("/")
     }

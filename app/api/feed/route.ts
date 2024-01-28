@@ -38,7 +38,6 @@ export async function GET(req: Request) {
       user: true,
     }
   });
-  console.log(feedList);
   return Response.json({
     ok: true,
     feedList,

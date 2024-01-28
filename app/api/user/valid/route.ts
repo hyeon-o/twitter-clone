@@ -15,8 +15,6 @@ export async function POST(req: Request) {
     },
   });
 
-  console.log(user);
-
   if (!user) {
     return Response.json({
       ok: false,

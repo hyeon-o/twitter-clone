@@ -20,7 +20,6 @@ export default function Page() {
   // form input
   const { register, handleSubmit } = useForm<CreateAccountForm>();
   const onSubmit = (data: CreateAccountForm) => {
-    console.log(data);
     createUser(data);
   };
 
