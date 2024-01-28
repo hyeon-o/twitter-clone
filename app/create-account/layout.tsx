@@ -1,4 +1,4 @@
-import AccountLayout from "@/components/layout/account";
+import AccountLayout from "@/component/layout/account";
 
 export default function Layout({
   children,
